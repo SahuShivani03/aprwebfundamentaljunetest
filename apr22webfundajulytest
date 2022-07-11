@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(67, 67, 100);
+        }
+
+        div {
+            margin: 13em auto;
+            background-color: rgb(67, 67, 100);
+            border: 2px solid gray;
+            text-align: center;
+            width: 600px;
+
+        }
+
+        div .btn {
+            padding: 10px;
+            color: white;
+            background-color: black;
+            width: 250px;
+            margin-bottom: 30px;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="i1">Geekster</h1>
+        <h2 id="i2">geek@gmail.com</h2>
+        <h2 id="i3">Mumbai</h2>
+        <h2 id="i4">www.geekster.com</h2>
+        <button class="btn" onclick="fetchData()"> FETCH DATA</button>
+    </div>
+
+    <script>
+        function fetchData() {
+            const h1Ref = document.getElementById('i1');
+            const secRef = document.getElementById('i2');
+            const thirdRef = document.getElementById('i3');
+            const h2Ref = document.getElementById('i4');
+            const bodyRef = document.querySelector('body');
+            const divRef = document.querySelector('div');
+
+            h1Ref.innerText = "Shivani";
+            h1Ref.style.color = "blue";
+
+            secRef.innerText = "sivani.10121999@gmail.com";
+            console.log(secRef);
+
+            thirdRef.innerText = "Kanpur";
+            console.log(thirdRef);
+            h2Ref.innerText = "www.evolveclasses";
+
+            bodyRef.style.backgroundColor = "aqua";
+            divRef.style.backgroundColor = "lightpink";
+
+            const api_url = "https://jsonplaceholder.typicode.com/users";
+async function getapi(url){
+    const response = await fetch(url);
+    var data = await response.json();
+    console.log(data);
+}
+getapi(api_url);
+
+
+        
+
+         }
+
+    </script>
+</body>
+
+</html>
